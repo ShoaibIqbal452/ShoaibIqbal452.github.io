@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Shoaib Ahmed · AI Engineer, Berlin</title>
+<meta name="description" content="Berlin-based AI and Python backend engineer. 9 years building production systems: multi-agent RAG, LLM agents, FastAPI, Django, AWS.">
+<meta property="og:title" content="Muhammad Shoaib Ahmed · AI & Python Backend Engineer">
+<meta property="og:description" content="Berlin-based. 9 years. Production LLM systems, multi-agent RAG, Python backends on AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f14;--bg2:#111821;--card:#141c26;--line:#223044;
+  --text:#d7e0ea;--muted:#8a9bb0;--accent:#4ade80;--accent2:#38bdf8;--warn:#fbbf24;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:16px}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,15,20,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-family:var(--mono);color:var(--accent);font-weight:600}
+.logo span{color:var(--muted)}
+nav ul{display:flex;gap:22px;list-style:none;font-family:var(--mono);font-size:13px}
+nav ul a{color:var(--muted)}
+nav ul a:hover{color:var(--text);text-decoration:none}
+@media(max-width:640px){nav ul{display:none}}
+
+.hero{padding:88px 0 64px}
+.prompt{font-family:var(--mono);color:var(--muted);font-size:14px;margin-bottom:18px}
+.prompt b{color:var(--accent);font-weight:400}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.1;letter-spacing:-.02em;font-weight:700}
+h1 .hl{color:var(--accent)}
+.tag{font-family:var(--mono);font-size:clamp(15px,2.2vw,18px);color:var(--accent2);margin:14px 0 22px}
+.lead{max-width:680px;color:var(--text);font-size:18px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+.badge{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);background:var(--bg2);padding:6px 10px;border-radius:6px;color:var(--muted)}
+.badge.ok{color:var(--accent);border-color:#1f4d33}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--mono);font-size:14px;padding:11px 18px;border-radius:8px;border:1px solid var(--line);color:var(--text);background:var(--card);display:inline-block}
+.btn.primary{background:var(--accent);color:#06210f;border-color:var(--accent);font-weight:600}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+.h2{font-family:var(--mono);font-size:14px;color:var(--accent);margin-bottom:8px}
+h2{font-size:28px;letter-spacing:-.01em;margin-bottom:28px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.stat .n{font-family:var(--mono);font-size:26px;color:var(--accent);font-weight:600}
+.stat .l{color:var(--muted);font-size:13.5px}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;margin-bottom:22px}
+.case-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.case h3{font-size:21px}
+.pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:99px;border:1px solid #1f4d33;color:var(--accent)}
+.pill.int{border-color:#4b3d12;color:var(--warn)}
+.case .sub{color:var(--muted);margin-bottom:16px}
+.case ul{padding-left:18px;margin:10px 0 16px}
+.case li{margin-bottom:6px}
+.case li b{color:#fff;font-weight:600}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.stack span{font-family:var(--mono);font-size:12px;color:var(--accent2);background:#0e1a24;border:1px solid #173246;padding:3px 8px;border-radius:5px}
+.diagram{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px;margin:14px 0;overflow-x:auto}
+.diagram svg{display:block;min-width:720px;width:100%;height:auto}
+
+.tl{position:relative;padding-left:26px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.job{position:relative;margin-bottom:26px}
+.job:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job .when{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.job h4{font-size:17px}
+.job h4 span{color:var(--muted);font-weight:400}
+.job p{color:var(--text);font-size:15px;margin-top:4px}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.sk h5{font-family:var(--mono);font-size:13px;color:var(--accent2);margin-bottom:8px;font-weight:600}
+.sk p{color:var(--text);font-size:14.5px}
+@media(max-width:720px){.skills{grid-template-columns:1fr}}
+
+.about p{max-width:720px;margin-bottom:14px;font-size:17px}
+.contact{text-align:center}
+.contact p{color:var(--muted);margin-bottom:22px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center}
+.cursor{display:inline-block;width:9px;height:18px;background:var(--accent);vertical-align:-3px;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px 0 4px}
+.grid2 p{font-size:15px;color:var(--text)}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+h4.k{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px;font-weight:600}
+.dec{padding-left:18px}.dec li{margin-bottom:10px;font-size:15px}
+.dec li b{color:#fff}
+.diagram.wide svg{min-width:860px}
+.note{font-size:13px;color:var(--muted);font-style:italic;margin:4px 0 10px}
+.sk h5{text-transform:none}
+</style>
+
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="logo">shoaib<span>@berlin:~$</span></div>
+  <ul>
+    <li><a href="#work">./systems</a></li>
+    <li><a href="#principles">./principles</a></li>
+    <li><a href="#experience">./experience</a></li>
+    <li><a href="#skills">./stack</a></li>
+    <li><a href="#contact">./contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="prompt"><b>$</b> whoami<span class="cursor"></span></div>
+  <h1>Muhammad Shoaib Ahmed.<br>I build <span class="hl">LLM systems</span> that hold up in production.</h1>
+  <div class="tag">AI Engineer · Python Backend · Multi-Agent RAG · Berlin</div>
+  <p class="lead">Grounded, validated, evaluated and cost-aware. I design the graph, write the backend, run the infrastructure and measure the quality. 9 years of engineering across Goldman Sachs, the BBC and startups; the last two spent shipping AI systems that real people use every day.</p>
+  <div class="badges">
+    <span class="badge ok">● Based in Berlin</span>
+    <span class="badge ok">● Authorised to work in Germany</span>
+    <span class="badge ok">● Available immediately</span>
+    <span class="badge">Looking for one team, for the long term</span>
+  </div>
+  <div class="cta">
+    <a class="btn primary" href="Muhammad_Shoaib_Ahmed_CV.pdf" download>↓ Download CV</a>
+    <a class="btn" href="https://thegoodscholar.com" target="_blank" rel="noopener">Try my live RAG system</a>
+    <a class="btn" href="https://www.linkedin.com/in/muhammad-shoaib-ahmed-45bb5b167" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/ShoaibIqbal452" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">28,793</div><div class="l">texts behind a live multi-agent RAG system</div></div>
+    <div class="stat"><div class="n">~50 h</div><div class="l">of meetings turned into minutes and tickets every week</div></div>
+    <div class="stat"><div class="n">5k–20k</div><div class="l">news items a day, designed into a story-ranking engine</div></div>
+    <div class="stat"><div class="n">250k+</div><div class="l">transactions per wallet through a fintech AI pipeline</div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="h2">// systems I designed and own</div>
+  <h2>Selected systems</h2>
+
+  <article class="case">
+    <div class="case-head"><h3>thegoodscholar.com</h3><span class="pill">● live in production</span></div>
+    <p class="sub">A multi-agent RAG assistant that answers questions over 28,793 curated scholarly texts, with a citation on every answer. Built end to end at AI Labs: graph, backend, frontend and AWS.</p>
+    <div class="grid2">
+      <div><h4 class="k">The problem</h4><p>In religious scholarship a confident wrong answer is worse than no answer. The system had to refuse what it should not answer, stay strictly inside its sources, and still feel instant.</p></div>
+      <div><h4 class="k">The result</h4><p>About 10 seconds to a full cited answer at roughly 3,000 tokens per query, with the first tokens streaming in straight away. Off-topic questions are stopped before they cost anything.</p></div>
+    </div>
+    <div class="diagram wide" role="img" aria-label="Architecture of thegoodscholar: React client through CloudFront and ALB to FastAPI on ECS Fargate; a LangGraph graph loads history, validates the question, routes it 8 ways, retrieves in parallel from Pinecone namespaces and real-time tools, synthesizes a cited streamed answer, and validates it against sources with up to 2 retries."><svg viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+<defs>
+ <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4ade80"/></marker>
+ <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+ <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f87171"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
+<marker id="bs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0L0 5L10 10z" fill="#38bdf8"/></marker>
+</defs>
+<style>.n{fill:#141c26;stroke:#2b3d55}.t{fill:#d7e0ea}.s{fill:#8a9bb0;font-size:10.5px}.h{fill:#4ade80;font-size:11px}.lane{fill:none;stroke:#223044;stroke-dasharray:3 4}</style>
+
+<!-- edge lane -->
+<text x="20" y="18" class="h">CLIENT + EDGE</text>
+<rect class="n" x="20" y="28" width="180" height="50" rx="8"/><text class="t" x="110" y="50" text-anchor="middle">React + Vite client</text><text class="s" x="110" y="66" text-anchor="middle">live tool status · stop</text>
+<rect class="n" x="260" y="28" width="170" height="50" rx="8"/><text class="t" x="345" y="50" text-anchor="middle">CloudFront → ALB</text><text class="s" x="345" y="66" text-anchor="middle">TLS via ACM, Route 53</text>
+<rect class="n" x="490" y="28" width="230" height="50" rx="8"/><text class="t" x="605" y="50" text-anchor="middle">FastAPI on ECS Fargate</text><text class="s" x="605" y="66" text-anchor="middle">magic-link login + JWT</text>
+<path d="M202 53H258" stroke="#38bdf8" stroke-width="1.5" marker-start="url(#bs)" marker-end="url(#b)"/>
+<path d="M432 53H488" stroke="#38bdf8" stroke-width="1.5" marker-start="url(#bs)" marker-end="url(#b)"/>
+<text x="740" y="50" fill="#38bdf8" font-size="11">⇄ HTTPS request</text><text x="740" y="66" fill="#38bdf8" font-size="11">  SSE token stream back</text>
+
+<!-- graph -->
+<rect class="lane" x="10" y="100" width="940" height="300" rx="10"/>
+<text x="20" y="118" class="h">LANGGRAPH STATE GRAPH</text>
+<path d="M605 78V128H105V146" stroke="#4ade80" stroke-width="1.5" fill="none" marker-end="url(#g)"/>
+
+<rect class="n" x="30" y="148" width="150" height="56" rx="8"/><text class="t" x="105" y="171" text-anchor="middle">Load history</text><text class="s" x="105" y="188" text-anchor="middle">last 5 turns (Postgres)</text>
+<rect class="n" x="215" y="148" width="150" height="56" rx="8"/><text class="t" x="290" y="171" text-anchor="middle">Validator</text><text class="s" x="290" y="188" text-anchor="middle">gate before retrieval</text>
+<rect class="n" x="400" y="148" width="140" height="56" rx="8"/><text class="t" x="470" y="171" text-anchor="middle">Router</text><text class="s" x="470" y="188" text-anchor="middle">8-way LLM intent</text>
+<path d="M180 176H213" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M365 176H398" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+
+<rect class="n" x="215" y="300" width="150" height="46" rx="8" style="stroke:#7f3b3b"/><text class="t" x="290" y="320" text-anchor="middle">Polite refusal</text><text class="s" x="290" y="335" text-anchor="middle">no tokens wasted</text>
+<path d="M290 204V298" stroke="#f87171" stroke-width="1.4" marker-end="url(#r)"/><text x="298" y="258" fill="#f87171" font-size="10.5">off-topic /</text><text x="298" y="271" fill="#f87171" font-size="10.5">gibberish</text>
+
+<rect class="n" x="580" y="136" width="170" height="40" rx="8"/><text class="t" x="665" y="161" text-anchor="middle">Pinecone ns A</text>
+<rect class="n" x="580" y="186" width="170" height="40" rx="8"/><text class="t" x="665" y="211" text-anchor="middle">Pinecone ns B … n</text>
+<rect class="n" x="570" y="236" width="190" height="60" rx="8"/><text class="t" x="665" y="256" text-anchor="middle">Real-time tools</text><text class="s" x="665" y="274" text-anchor="middle" font-size="10">prayer times · Hijri · Qibla</text><text class="s" x="665" y="288" text-anchor="middle" font-size="10">Sehri/Iftar · verse lookup</text>
+<path d="M540 170L578 157" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M540 178L578 205" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M540 188L578 258" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<text x="470" y="222" fill="#8a9bb0" font-size="10.5" text-anchor="middle">fans out in parallel</text>
+
+<rect class="n" x="785" y="170" width="150" height="70" rx="8"/><text class="t" x="860" y="193" text-anchor="middle">Synthesize</text><text class="s" x="860" y="210" text-anchor="middle">grounded + cited</text><text class="s" x="860" y="224" text-anchor="middle">mid-answer tool calls</text>
+<path d="M750 156L783 188" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M750 206H783" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M750 262L783 224" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+
+<rect class="n" x="785" y="300" width="150" height="56" rx="8" style="stroke:#6b5a1c"/><text class="t" x="860" y="323" text-anchor="middle">Validate</text><text class="s" x="860" y="340" text-anchor="middle">answer vs sources</text>
+<path d="M860 240V298" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/>
+<path d="M935 322 C952 322 952 205 937 205" stroke="#fbbf24" stroke-width="1.4" fill="none" stroke-dasharray="4 3" marker-end="url(#y)"/>
+<text x="860" y="378" fill="#fbbf24" font-size="10.5" text-anchor="middle">drift → retry (max 2)</text>
+
+<rect class="n" x="530" y="310" width="200" height="46" rx="8" style="stroke:#1f4d33"/><text class="t" x="630" y="330" text-anchor="middle">Answer + citations</text><text class="s" x="630" y="345" text-anchor="middle">turn saved to Postgres</text>
+<path d="M785 333H732" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g)"/><text x="740" y="324" fill="#4ade80" font-size="10.5">pass</text>
+
+<!-- data lane -->
+<text x="20" y="428" class="h">DATA, MODELS + QUALITY</text>
+<rect class="n" x="20" y="438" width="215" height="60" rx="8"/><text class="t" x="127" y="462" text-anchor="middle">Pinecone</text><text class="s" x="127" y="479" text-anchor="middle">28,793 texts · 3-small embeds</text>
+<rect class="n" x="255" y="438" width="215" height="60" rx="8"/><text class="t" x="362" y="462" text-anchor="middle">PostgreSQL on RDS</text><text class="s" x="362" y="479" text-anchor="middle">users · chats · history</text>
+<rect class="n" x="490" y="438" width="215" height="60" rx="8"/><text class="t" x="597" y="462" text-anchor="middle">OpenAI</text><text class="s" x="597" y="479" text-anchor="middle">GPT-4o-mini · function calling</text>
+<rect class="n" x="725" y="438" width="215" height="60" rx="8" style="stroke:#1f4d33"/><text class="t" x="832" y="462" text-anchor="middle">Eval harness</text><text class="s" x="832" y="479" text-anchor="middle">golden set → CI quality gate</text>
+<text x="480" y="535" fill="#8a9bb0" font-size="11" text-anchor="middle">~10 s average answer · ~3,000 tokens per query · every answer cited</text>
+</svg>
+</div>
+    <h4 class="k">Engineering decisions</h4>
+    <ul class="dec">
+      <li><b>Gate before you spend.</b> A Validator node rejects off-topic or gibberish questions before any embedding or retrieval call. Cheaper, and it removes a whole class of confident nonsense.</li>
+      <li><b>8-way intent routing with parallel fan-out.</b> An LLM router classifies the question and queries only the relevant Pinecone namespaces at the same time, so adding knowledge areas does not add latency.</li>
+      <li><b>Self-correction inside the graph.</b> A Validate node checks the answer against the retrieved sources and triggers up to 2 retries on drift. Capping retries keeps cost and latency predictable.</li>
+      <li><b>Tools, not just retrieval.</b> Live prayer times, Hijri dates, Qibla direction, Sehri/Iftar and verse lookup are tool calls the model can make mid-answer while still streaming, with live tool status and a stop button in the UI.</li>
+      <li><b>Quality you can measure.</b> An offline golden-set eval harness runs in CI as a quality gate. It showed retrieval ranking is the next bottleneck, so a reranker is the next change, chosen from data rather than guesswork.</li>
+    </ul>
+    <div class="stack"><span>LangGraph</span><span>OpenAI GPT-4o-mini</span><span>text-embedding-3-small</span><span>Pinecone</span><span>FastAPI</span><span>PostgreSQL / RDS</span><span>SQLAlchemy</span><span>SSE</span><span>React + TS + Vite</span><span>Magic-link auth + JWT</span><span>ECS Fargate</span><span>CloudFront</span><span>Docker</span><span>GitHub Actions</span></div>
+    <p style="margin-top:18px"><a class="btn" href="https://thegoodscholar.com" target="_blank" rel="noopener">→ Try it live</a></p>
+  </article>
+
+  <article class="case">
+    <div class="case-head"><h3>News recommendation engine and ingestion platform</h3><span class="pill int">client delivery · in build</span></div>
+    <p class="sub">The engine behind an AI newsroom: it pulls five live-news APIs, groups every item into stories, and tells editors which stories matter right now. I own both the ingestion layer and the recommendation engine.</p>
+    <div class="grid2">
+      <div><h4 class="k">The problem</h4><p>Thousands of items a day, many of them the same event reported five times. Editors need a short ranked list of stories, not a firehose, and the product has no user data on day one to learn from.</p></div>
+      <div><h4 class="k">The approach</h4><p>Layered from cheap to expensive: embeddings and clustering first, a transparent importance score second, and LLMs only at story level where they earn their cost. Personalisation and learning from editors are designed in from the start.</p></div>
+    </div>
+    <div class="diagram wide" role="img" aria-label="News engine: live-news APIs flow through a scheduler with resumable backfill into a normalised durable archive; items are embedded, clustered into stories within a 48 hour window, scored on six signals, summarised per story by an LLM, and served as a ranked feed, related stories and trending topics; editor feedback, LLM re-rank and personalisation are designed for later."><svg viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+<defs>
+ <marker id="g2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4ade80"/></marker>
+ <marker id="y2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+ <marker id="b2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
+</defs>
+<style>.n{fill:#141c26;stroke:#2b3d55}.t{fill:#d7e0ea}.s{fill:#8a9bb0;font-size:10.5px}.h{fill:#4ade80;font-size:11px}.f{fill:#141c26;stroke:#6b5a1c;stroke-dasharray:4 3}</style>
+
+<text x="20" y="18" class="h">1 · INGESTION (cheap, always on)</text>
+<rect class="n" x="20" y="28" width="170" height="56" rx="8"/><text class="t" x="105" y="51" text-anchor="middle">Live-news APIs</text><text class="s" x="105" y="68" text-anchor="middle">5 providers · ~5k–20k/day</text>
+<rect class="n" x="225" y="28" width="235" height="56" rx="8"/><text class="t" x="342" y="51" text-anchor="middle">Scheduler</text><text class="s" x="342" y="68" text-anchor="middle">cron pulls + 6-month backfill</text>
+<rect class="n" x="495" y="28" width="195" height="56" rx="8"/><text class="t" x="592" y="51" text-anchor="middle">Normalise + store</text><text class="s" x="592" y="68" text-anchor="middle">one schema, every provider</text>
+<rect class="n" x="725" y="28" width="215" height="56" rx="8"/><text class="t" x="832" y="51" text-anchor="middle">Durable archive</text><text class="s" x="832" y="68" text-anchor="middle">queryable · ~1–4M backfill</text>
+<path d="M190 56H223" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M460 56H493" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M690 56H723" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<text x="342" y="100" fill="#fbbf24" font-size="10.5" text-anchor="middle">checkpointed: resumes, never restarts</text>
+
+<text x="160" y="130" class="h">2 · STORY ENGINE</text>
+<rect class="n" x="20" y="140" width="150" height="70" rx="8"/><text class="t" x="95" y="168" text-anchor="middle">Embed item</text><text class="s" x="95" y="186" text-anchor="middle">one vector per item</text>
+<rect class="n" x="200" y="140" width="250" height="70" rx="8"/><text class="t" x="325" y="163" text-anchor="middle">Story clustering</text><text class="s" x="325" y="181" text-anchor="middle">join nearest story in a rolling</text><text class="s" x="325" y="195" text-anchor="middle">48h window, else start a new one</text>
+<rect class="n" x="480" y="140" width="230" height="110" rx="8" style="stroke:#1f4d33"/><text class="t" x="595" y="162" text-anchor="middle">Base importance score</text>
+<text class="s" x="500" y="182">· source diversity</text><text class="s" x="500" y="196">· velocity of new items</text><text class="s" x="500" y="210">· freshness (time decay)</text><text class="s" x="500" y="224">· provider urgency flag</text><text class="s" x="500" y="238">· trust tier · novelty vs archive</text>
+<rect class="n" x="740" y="140" width="200" height="70" rx="8"/><text class="t" x="840" y="163" text-anchor="middle">LLM, per story only</text><text class="s" x="840" y="181" text-anchor="middle">summary + "what's new"</text><text class="s" x="840" y="195" text-anchor="middle">when a story updates</text>
+<path d="M592 84V112H95V138" stroke="#4ade80" stroke-width="1.5" fill="none" marker-end="url(#g2)"/>
+<path d="M170 175H198" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M450 175H478" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M710 175H738" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M832 84V104H700V138" stroke="#38bdf8" stroke-width="1.2" fill="none" stroke-dasharray="4 3" marker-end="url(#b2)"/><text x="706" y="100" fill="#38bdf8" font-size="10">novelty check</text>
+<text x="325" y="232" fill="#8a9bb0" font-size="10.5" text-anchor="middle">ranks stories, not articles:</text><text x="325" y="246" fill="#8a9bb0" font-size="10.5" text-anchor="middle">5 wires on one event = 1 pick</text>
+
+<text x="20" y="290" class="h">3 · OUTPUTS</text>
+<rect class="n" x="20" y="300" width="290" height="60" rx="8" style="stroke:#1f4d33"/><text class="t" x="165" y="324" text-anchor="middle">Ranked story feed</text><text class="s" x="165" y="341" text-anchor="middle">for editors and the desk</text>
+<rect class="n" x="335" y="300" width="290" height="60" rx="8"/><text class="t" x="480" y="324" text-anchor="middle">Related stories</text><text class="s" x="480" y="341" text-anchor="middle">free from the same embeddings</text>
+<rect class="n" x="650" y="300" width="290" height="60" rx="8"/><text class="t" x="795" y="324" text-anchor="middle">Trending topics</text><text class="s" x="795" y="341" text-anchor="middle">velocity + acceleration on clusters</text>
+<path d="M595 250V272H165V298" stroke="#4ade80" stroke-width="1.5" fill="none" marker-end="url(#g2)"/>
+<path d="M480 272V298" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g2)"/>
+<path d="M595 272H795V298" stroke="#4ade80" stroke-width="1.5" fill="none" marker-end="url(#g2)"/>
+
+<text x="20" y="400" class="h" style="fill:#fbbf24">4 · DESIGNED IN, SWITCHED ON LATER</text>
+<rect class="f" x="20" y="410" width="290" height="60" rx="8"/><text class="t" x="165" y="434" text-anchor="middle">Editor feedback log</text><text class="s" x="165" y="451" text-anchor="middle">picked · dismissed · published, day 1</text>
+<rect class="f" x="335" y="410" width="290" height="60" rx="8"/><text class="t" x="480" y="434" text-anchor="middle">LLM re-rank of top ~20</text><text class="s" x="480" y="451" text-anchor="middle">only where it pays for itself</text>
+<rect class="f" x="650" y="410" width="290" height="60" rx="8"/><text class="t" x="795" y="434" text-anchor="middle">Personal desk</text><text class="s" x="795" y="451" text-anchor="middle">score = importance × affinity</text>
+<path d="M290 360V408" stroke="#fbbf24" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#y2)"/>
+<text x="480" y="500" fill="#8a9bb0" font-size="11" text-anchor="middle">cheap signals first, LLM only where it earns its cost · embedding the full backfill ≈ tens of dollars</text>
+</svg>
+</div>
+    <h4 class="k">Engineering decisions</h4>
+    <ul class="dec">
+      <li><b>Rank stories, not articles.</b> Each item is embedded and joined to the nearest story in a rolling 48-hour window, or starts a new one. Five agencies on one event become one pick, which is what editors actually want.</li>
+      <li><b>Useful with zero users.</b> A base importance score from source diversity, arrival velocity, time-decayed freshness, provider urgency flags, source trust tier and novelty against the archive. It is explainable, so editors can see why a story is on top.</li>
+      <li><b>LLM where it pays.</b> LLMs write a summary per story and a "what's new" note when a story updates. They never rank the whole feed, which keeps cost and latency flat as volume grows. An LLM re-rank of the top ~20 is an option, not a dependency.</li>
+      <li><b>Collect the learning signal from day one.</b> Every editor action (picked, dismissed, published) is logged now, so a learned re-ranker and personal desks (importance × affinity) can be switched on later without a rewrite.</li>
+      <li><b>Backfill that survives failure.</b> A six-month history of an estimated 1 to 4 million items is ingested with checkpoints, so an interruption resumes instead of starting again. Embedding the whole backfill costs tens of dollars.</li>
+    </ul>
+    <p class="note">Volumes are design targets from provider estimates and will be confirmed against live API traffic.</p>
+    <div class="stack"><span>Python</span><span>Embeddings</span><span>Online clustering</span><span>Ranking / scoring</span><span>PostgreSQL / Supabase</span><span>Scheduled ingestion</span><span>Resumable backfill</span><span>LLM summarisation</span></div>
+  </article>
+
+  <article class="case">
+    <div class="case-head"><h3>Meetings intelligence bot</h3><span class="pill">● live · company-wide</span></div>
+    <p class="sub">Joins Google Meet calls, records and transcribes them, writes the minutes, emails attendees and turns action items into assigned tickets. It processes about 50 hours of calls every week.</p>
+    <div class="diagram" role="img" aria-label="Meetings bot: Google Meet call captured by a self-hosted headless Chromium and ffmpeg container, stored in S3 and transcribed, then a minutes agent emails attendees and an action-item agent creates Jira or Linear tickets with Slack notifications."><svg viewBox="0 0 960 250" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" font-size="12">
+<defs><marker id="g3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4ade80"/></marker></defs>
+<style>.n{fill:#141c26;stroke:#2b3d55}.t{fill:#d7e0ea}.s{fill:#8a9bb0;font-size:10.5px}.h{fill:#4ade80;font-size:11px}</style>
+<text x="20" y="18" class="h">CAPTURE (self-hosted, company-owned)</text><text x="600" y="18" class="h">AGENTS</text>
+<rect class="n" x="20" y="60" width="140" height="56" rx="8"/><text class="t" x="90" y="83" text-anchor="middle">Google Meet</text><text class="s" x="90" y="100" text-anchor="middle">bot joins the call</text>
+<rect class="n" x="190" y="60" width="180" height="56" rx="8"/><text class="t" x="280" y="83" text-anchor="middle">Headless bot</text><text class="s" x="280" y="100" text-anchor="middle">Chromium + ffmpeg container</text>
+<rect class="n" x="400" y="60" width="170" height="56" rx="8"/><text class="t" x="485" y="83" text-anchor="middle">S3 + transcription</text><text class="s" x="485" y="100" text-anchor="middle">in the language spoken</text>
+<rect class="n" x="600" y="28" width="160" height="56" rx="8"/><text class="t" x="680" y="51" text-anchor="middle">Minutes agent</text><text class="s" x="680" y="68" text-anchor="middle">decisions · summary</text>
+<rect class="n" x="600" y="100" width="160" height="56" rx="8"/><text class="t" x="680" y="123" text-anchor="middle">Action-item agent</text><text class="s" x="680" y="140" text-anchor="middle">assigns owners + tickets</text>
+<rect class="n" x="790" y="28" width="150" height="56" rx="8"/><text class="t" x="865" y="51" text-anchor="middle">Email</text><text class="s" x="865" y="68" text-anchor="middle">to every attendee</text>
+<rect class="n" x="790" y="100" width="150" height="56" rx="8" style="stroke:#1f4d33"/><text class="t" x="865" y="123" text-anchor="middle">Jira · Linear</text><text class="s" x="865" y="140" text-anchor="middle">+ Slack notify</text>
+<path d="M160 88H188" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<path d="M370 88H398" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<path d="M570 82L598 60" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<path d="M570 94L598 124" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<path d="M760 56H788" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<path d="M760 128H788" stroke="#4ade80" stroke-width="1.5" marker-end="url(#g3)"/>
+<text x="480" y="200" fill="#4ade80" font-size="13" text-anchor="middle">~50 hours of calls processed every week, company-wide</text>
+<text x="480" y="222" fill="#8a9bb0" font-size="11" text-anchor="middle">no third-party bot vendor ever sees a recording</text>
+</svg>
+</div>
+    <h4 class="k">Engineering decisions</h4>
+    <ul class="dec">
+      <li><b>Own the capture layer.</b> I built a self-hosted headless bot (containerised Chromium plus ffmpeg) instead of paying for a managed meeting-bot API. Recordings and transcripts stay in company storage, and no vendor sees them.</li>
+      <li><b>Separate agents, separate jobs.</b> One agent writes minutes, another extracts decisions and action items with owners, so each prompt stays small and testable.</li>
+      <li><b>Output where people already work.</b> Tickets go to Jira or Linear, notifications to Slack, minutes to email. No new tool for anyone to open.</li>
+    </ul>
+    <div class="stack"><span>Python</span><span>Multi-agent</span><span>Speech-to-text</span><span>Headless Chromium</span><span>ffmpeg</span><span>Docker</span><span>S3</span><span>Jira / Linear / Slack APIs</span></div>
+  </article>
+
+  <article class="case">
+    <div class="case-head"><h3>AI accounting agent for crypto tax</h3><span class="pill int">Hyperion · led 3 engineers</span></div>
+    <p class="sub">An agent that reconciles crypto transactions and answers account-specific financial questions, where a wrong answer means a wrong tax report.</p>
+    <ul class="dec">
+      <li><b>Grounded in the customer's own history.</b> RAG with pgvector over each account's transactions and past classification decisions, so the model follows precedent instead of guessing.</li>
+      <li><b>Humans in the loop where it matters.</b> Every AI classification gets a confidence score. Low-confidence cases go to a reviewer through an escalation path with full audit logs. 90%+ accuracy against ground-truth samples.</li>
+      <li><b>Scale.</b> ETL pipelines grew from 10,000 to 250,000+ transactions per wallet; Celery and Redis raised throughput by 70%.</li>
+    </ul>
+    <div class="stack"><span>Django REST</span><span>FastAPI</span><span>pgvector</span><span>Celery</span><span>Redis</span><span>GCP</span><span>Docker</span></div>
+  </article>
+</div></section>
+
+<section id="principles"><div class="wrap">
+  <div class="h2">// how I build AI systems</div>
+  <h2>Principles</h2>
+  <div class="skills">
+    <div class="sk"><h5>01 · gate before you spend</h5><p>Reject bad input before retrieval or model calls. The cheapest token is the one you never send.</p></div>
+    <div class="sk"><h5>02 · cheap signals first</h5><p>Embeddings, clustering and plain scoring do most of the work. LLMs go where they clearly earn their cost.</p></div>
+    <div class="sk"><h5>03 · measure, then change</h5><p>Golden sets and CI gates decide what to fix next. The next change to my RAG system (a reranker) was chosen by eval data, not a hunch.</p></div>
+    <div class="sk"><h5>04 · own the data path</h5><p>Keep recordings, documents and user data inside your own infrastructure unless there is a strong reason not to.</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="h2">// git log --career</div>
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="job"><div class="when">04/2026 · present</div><h4>AI Engineer <span>· AI Labs (UK, remote)</span></h4><p>Three production AI systems: thegoodscholar.com, the meetings intelligence bot, and the newsroom ingestion and recommendation engine.</p></div>
+    <div class="job"><div class="when">06/2025 · 03/2026</div><h4>Senior Software Engineer <span>· Livener</span></h4><p>Broadcasting platform. Led the move from scattered microservices to one monorepo, built the media library system in Node.js, and ran AWS Fargate, Aurora and CI/CD.</p></div>
+    <div class="job"><div class="when">03/2024 · 05/2025</div><h4>Development Team Lead <span>· Hyperion (US, remote)</span></h4><p>Crypto accounting fintech. Led 3 engineers; built the AI accounting agent and ETL at 250k+ transactions per wallet.</p></div>
+    <div class="job"><div class="when">08/2024 · 01/2025</div><h4>Senior Full Stack Engineer <span>· Goldman Sachs (via Insight Global)</span></h4><p>Secure reporting APIs in Django and FastAPI, PostgreSQL tuning, Redis and Celery. Acting team lead for 2 months.</p></div>
+    <div class="job"><div class="when">06/2022 · 03/2024</div><h4>Full Stack Engineer <span>· BBC</span></h4><p>WebCore platform team (BBC Bitesize). Shared React components used across BBC teams; Node.js and Django services; AWS Lambda.</p></div>
+    <div class="job"><div class="when">07/2019 · 07/2022</div><h4>Full Stack Engineer <span>· Civixa.ai</span></h4><p>Annotation studio and document management platform for AI data work; Django, Node.js, React on AWS.</p></div>
+    <div class="job"><div class="when">06/2017 · 06/2019</div><h4>Full Stack Developer <span>· Wukla / Paksign</span></h4><p>Legal document generation and e-signature products; re-architected PDF processing to cut server load.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="h2">// cat stack.yaml</div>
+  <h2>Tech stack</h2>
+  <div class="skills">
+    <div class="sk"><h5>ai_llm:</h5><p>LangGraph, LangChain, multi-agent orchestration, RAG, tool / function calling, OpenAI, embeddings, Pinecone, pgvector, eval harnesses and CI quality gates, speech-to-text</p></div>
+    <div class="sk"><h5>backend:</h5><p>Python (7 yrs), FastAPI, Django REST Framework, Node.js, SSE streaming, REST APIs, microservices, Celery, Pytest</p></div>
+    <div class="sk"><h5>data_infra:</h5><p>PostgreSQL, Redis, Supabase, AWS (ECS Fargate, ECR, ALB, CloudFront, S3, RDS, Lambda, Route 53, ACM, SSM), GCP, Docker, GitHub Actions, Jenkins</p></div>
+    <div class="sk"><h5>frontend:</h5><p>React, TypeScript, Vite, streaming chat UIs, Angular</p></div>
+  </div>
+</div></section>
+
+<section id="about" class="about"><div class="wrap">
+  <div class="h2">// README.md</div>
+  <h2>About me</h2>
+  <p>I studied in the UK (BSc Computer Science, Bradford; MSc Cyber Security, Staffordshire) and worked there for several years. My UK visa had a fixed end date, so contract roles were the practical choice, and I finished every contract I took on.</p>
+  <p>Now I live in Berlin, I am authorised to work in Germany, and I don't need a sponsor. What I want next is simple: <b>one team, for the long term.</b> Somewhere I can own systems for years, not months.</p>
+  <p>English fluent, Urdu native, German A1 and improving every week.</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="h2">// ping me</div>
+  <h2>Let's talk</h2>
+  <p>Hiring for an AI or Python backend role in Germany? I would love to hear from you.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:ishoaib452@gmail.com">ishoaib452@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/muhammad-shoaib-ahmed-45bb5b167" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="Muhammad_Shoaib_Ahmed_CV.pdf" download>↓ CV (PDF)</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Muhammad Shoaib Ahmed · Berlin · plain HTML and CSS, no frameworks</footer>
+
+</body>
+</html>
